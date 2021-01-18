@@ -1,0 +1,12 @@
+Capturing output to logs/update-20210117-235658.log
+Update started at 2021-01-17 23:56:58
+Updating repo 'aiegoo/hanuman' on all servers
+./server-update-ansible: line 37: cd: /root/ansible/playbooks: No such file or directory
+ 
+========================================
+Ansible failed!
+----------------------------------------
+    Your log file is at logs/update-20210117-235658.log
+    Your environment:
+========================================
+Update finished at 2021-01-17 23:56:58

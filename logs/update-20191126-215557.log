@@ -1,0 +1,261 @@
+Capturing output to logs/update-20191126-215557.log
+Update started at 2019-11-26 21:55:57
+Updating repo 'aiegoo/hanuman' on all servers
+ansible-playbook 2.9.1
+  config file = /root/ansible/playbooks/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.15+ (default, Oct  7 2019, 17:39:04) [GCC 7.4.0]
+Using /root/ansible/playbooks/ansible.cfg as config file
+host_list declined parsing /root/ansible/playbooks/inventory.ini as it did not pass its verify_file() method
+script declined parsing /root/ansible/playbooks/inventory.ini as it did not pass its verify_file() method
+auto declined parsing /root/ansible/playbooks/inventory.ini as it did not pass its verify_file() method
+yaml declined parsing /root/ansible/playbooks/inventory.ini as it did not pass its verify_file() method
+Parsed /root/ansible/playbooks/inventory.ini inventory source with ini plugin
+
+PLAYBOOK: update.yml ***************************************************************
+1 plays in ./update.yml
+
+PLAY [Update Repos] ****************************************************************
+META: ran handlers
+
+TASK [git_update : clone the repository] *******************************************
+task path: /root/ansible/playbooks/roles/git_update/tasks/main.yml:2
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+<13.209.3.186> (0, '/root\n', '')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1574805358.14-219976752360201 `" && echo ansible-tmp-1574805358.14-219976752360201="` echo /root/.ansible/tmp/ansible-tmp-1574805358.14-219976752360201 `" ) && sleep 0'"'"''
+<54.180.86.51> (0, '/root\n', '')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1574805358.15-157074956462540 `" && echo ansible-tmp-1574805358.15-157074956462540="` echo /root/.ansible/tmp/ansible-tmp-1574805358.15-157074956462540 `" ) && sleep 0'"'"''
+<13.209.3.186> (0, 'ansible-tmp-1574805358.14-219976752360201=/root/.ansible/tmp/ansible-tmp-1574805358.14-219976752360201\n', '')
+<13.209.3.186> Attempting python interpreter discovery
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.5'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+<54.180.86.51> (0, 'ansible-tmp-1574805358.15-157074956462540=/root/.ansible/tmp/ansible-tmp-1574805358.15-157074956462540\n', '')
+<54.180.86.51> Attempting python interpreter discovery
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.5'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+<13.209.3.186> (0, 'PLATFORM\nLinux\nFOUND\n/usr/bin/python\n/usr/bin/python2.7\n/usr/bin/python\nENDFOUND\n', '')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'/usr/bin/python && sleep 0'"'"''
+<54.180.86.51> (0, 'PLATFORM\nLinux\nFOUND\n/usr/bin/python\n/usr/bin/python3.6\n/usr/bin/python2.7\n/usr/bin/python3\n/usr/bin/python\nENDFOUND\n', '')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'/usr/bin/python && sleep 0'"'"''
+<13.209.3.186> (0, '{"osrelease_content": "NAME=\\"Amazon Linux AMI\\"\\nVERSION=\\"2018.03\\"\\nID=\\"amzn\\"\\nID_LIKE=\\"rhel fedora\\"\\nVERSION_ID=\\"2018.03\\"\\nPRETTY_NAME=\\"Amazon Linux AMI 2018.03\\"\\nANSI_COLOR=\\"0;33\\"\\nCPE_NAME=\\"cpe:/o:amazon:linux:2018.03:ga\\"\\nHOME_URL=\\"http://aws.amazon.com/amazon-linux-ami/\\"\\n", "platform_dist_result": ["", "", ""]}\n', '')
+<13.209.3.186> Python interpreter discovery fallback (unsupported Linux distribution: amzn)
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/source_control/git.py
+<13.209.3.186> PUT /root/.ansible/tmp/ansible-local-20317dgOvYE/tmp5ZCocb TO /root/.ansible/tmp/ansible-tmp-1574805358.14-219976752360201/AnsiballZ_git.py
+<13.209.3.186> SSH: EXEC sftp -b - -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 '[13.209.3.186]'
+<54.180.86.51> (0, '{"osrelease_content": "NAME=\\"Ubuntu\\"\\nVERSION=\\"18.04.3 LTS (Bionic Beaver)\\"\\nID=ubuntu\\nID_LIKE=debian\\nPRETTY_NAME=\\"Ubuntu 18.04.3 LTS\\"\\nVERSION_ID=\\"18.04\\"\\nHOME_URL=\\"https://www.ubuntu.com/\\"\\nSUPPORT_URL=\\"https://help.ubuntu.com/\\"\\nBUG_REPORT_URL=\\"https://bugs.launchpad.net/ubuntu/\\"\\nPRIVACY_POLICY_URL=\\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\\"\\nVERSION_CODENAME=bionic\\nUBUNTU_CODENAME=bionic\\n", "platform_dist_result": ["Ubuntu", "18.04", "bionic"]}\n', '')
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/source_control/git.py
+<54.180.86.51> PUT /root/.ansible/tmp/ansible-local-20317dgOvYE/tmpIlMhOD TO /root/.ansible/tmp/ansible-tmp-1574805358.15-157074956462540/AnsiballZ_git.py
+<54.180.86.51> SSH: EXEC sftp -b - -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 '[54.180.86.51]'
+<13.209.3.186> (0, 'sftp> put /root/.ansible/tmp/ansible-local-20317dgOvYE/tmp5ZCocb /root/.ansible/tmp/ansible-tmp-1574805358.14-219976752360201/AnsiballZ_git.py\n', '')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1574805358.14-219976752360201/ /root/.ansible/tmp/ansible-tmp-1574805358.14-219976752360201/AnsiballZ_git.py && sleep 0'"'"''
+<13.209.3.186> (0, '', '')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 -tt 13.209.3.186 '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1574805358.14-219976752360201/AnsiballZ_git.py && sleep 0'"'"''
+<54.180.86.51> (0, 'sftp> put /root/.ansible/tmp/ansible-local-20317dgOvYE/tmpIlMhOD /root/.ansible/tmp/ansible-tmp-1574805358.15-157074956462540/AnsiballZ_git.py\n', '')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1574805358.15-157074956462540/ /root/.ansible/tmp/ansible-tmp-1574805358.15-157074956462540/AnsiballZ_git.py && sleep 0'"'"''
+<54.180.86.51> (0, '', '')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 -tt 54.180.86.51 '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1574805358.15-157074956462540/AnsiballZ_git.py && sleep 0'"'"''
+<13.209.3.186> (0, '\r\n{"after": "b738ebe6747a0b4a869c3106bc580b63fa46566e", "warnings": [], "changed": false, "remote_url_changed": false, "invocation": {"module_args": {"force": true, "track_submodules": false, "reference": null, "verify_commit": false, "ssh_opts": null, "bare": false, "archive": null, "executable": null, "recursive": true, "umask": null, "version": "master", "dest": "/var/root/repos/test_bare.git", "clone": true, "gpg_whitelist": [], "update": true, "repo": "ssh://root@206.189.85.199:/root/repos/test_bare.git", "remote": "origin", "refspec": null, "separate_git_dir": null, "accept_hostkey": false, "depth": null, "key_file": null}}, "before": "b738ebe6747a0b4a869c3106bc580b63fa46566e"}\r\n', 'Connection to 13.209.3.186 closed.\r\n')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'rm -f -r /root/.ansible/tmp/ansible-tmp-1574805358.14-219976752360201/ > /dev/null 2>&1 && sleep 0'"'"''
+<13.209.3.186> (0, '', '')
+[WARNING]: Platform linux on host 13.209.3.186 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_a
+ppendices/interpreter_discovery.html for more information.
+ok: [13.209.3.186] => {
+    "after": "b738ebe6747a0b4a869c3106bc580b63fa46566e", 
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "before": "b738ebe6747a0b4a869c3106bc580b63fa46566e", 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "accept_hostkey": false, 
+            "archive": null, 
+            "bare": false, 
+            "clone": true, 
+            "depth": null, 
+            "dest": "/var/root/repos/test_bare.git", 
+            "executable": null, 
+            "force": true, 
+            "gpg_whitelist": [], 
+            "key_file": null, 
+            "recursive": true, 
+            "reference": null, 
+            "refspec": null, 
+            "remote": "origin", 
+            "repo": "ssh://root@206.189.85.199:/root/repos/test_bare.git", 
+            "separate_git_dir": null, 
+            "ssh_opts": null, 
+            "track_submodules": false, 
+            "umask": null, 
+            "update": true, 
+            "verify_commit": false, 
+            "version": "master"
+        }
+    }, 
+    "remote_url_changed": false
+}
+<54.180.86.51> (0, '\r\n{"after": "b738ebe6747a0b4a869c3106bc580b63fa46566e", "warnings": [], "changed": false, "remote_url_changed": false, "invocation": {"module_args": {"force": true, "track_submodules": false, "reference": null, "verify_commit": false, "ssh_opts": null, "bare": false, "archive": null, "executable": null, "recursive": true, "umask": null, "version": "master", "dest": "/var/root/repos/test_bare.git", "clone": true, "gpg_whitelist": [], "update": true, "repo": "ssh://root@206.189.85.199:/root/repos/test_bare.git", "remote": "origin", "refspec": null, "separate_git_dir": null, "accept_hostkey": false, "depth": null, "key_file": null}}, "before": "b738ebe6747a0b4a869c3106bc580b63fa46566e"}\r\n', 'Connection to 54.180.86.51 closed.\r\n')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'rm -f -r /root/.ansible/tmp/ansible-tmp-1574805358.15-157074956462540/ > /dev/null 2>&1 && sleep 0'"'"''
+<54.180.86.51> (0, '', '')
+[DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host 54.180.86.51 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with 
+prior Ansible releases. A future Ansible release will default to using the 
+discovered platform python for this host. See https://docs.ansible.com/ansible/2.9/
+reference_appendices/interpreter_discovery.html for more information. This feature 
+will be removed in version 2.12. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+ok: [54.180.86.51] => {
+    "after": "b738ebe6747a0b4a869c3106bc580b63fa46566e", 
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "before": "b738ebe6747a0b4a869c3106bc580b63fa46566e", 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "accept_hostkey": false, 
+            "archive": null, 
+            "bare": false, 
+            "clone": true, 
+            "depth": null, 
+            "dest": "/var/root/repos/test_bare.git", 
+            "executable": null, 
+            "force": true, 
+            "gpg_whitelist": [], 
+            "key_file": null, 
+            "recursive": true, 
+            "reference": null, 
+            "refspec": null, 
+            "remote": "origin", 
+            "repo": "ssh://root@206.189.85.199:/root/repos/test_bare.git", 
+            "separate_git_dir": null, 
+            "ssh_opts": null, 
+            "track_submodules": false, 
+            "umask": null, 
+            "update": true, 
+            "verify_commit": false, 
+            "version": "master"
+        }
+    }, 
+    "remote_url_changed": false
+}
+
+TASK [git_update : git clean after checking out] ***********************************
+task path: /root/ansible/playbooks/roles/git_update/tasks/main.yml:9
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'echo ~root && sleep 0'"'"''
+<13.209.3.186> (0, '/root\n', '')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1574805381.78-222340959039814 `" && echo ansible-tmp-1574805381.78-222340959039814="` echo /root/.ansible/tmp/ansible-tmp-1574805381.78-222340959039814 `" ) && sleep 0'"'"''
+<54.180.86.51> (0, '/root\n', '')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /root/.ansible/tmp/ansible-tmp-1574805381.79-120274326387676 `" && echo ansible-tmp-1574805381.79-120274326387676="` echo /root/.ansible/tmp/ansible-tmp-1574805381.79-120274326387676 `" ) && sleep 0'"'"''
+<13.209.3.186> (0, 'ansible-tmp-1574805381.78-222340959039814=/root/.ansible/tmp/ansible-tmp-1574805381.78-222340959039814\n', '')
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/commands/command.py
+<13.209.3.186> PUT /root/.ansible/tmp/ansible-local-20317dgOvYE/tmpy8Njra TO /root/.ansible/tmp/ansible-tmp-1574805381.78-222340959039814/AnsiballZ_command.py
+<13.209.3.186> SSH: EXEC sftp -b - -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 '[13.209.3.186]'
+<54.180.86.51> (0, 'ansible-tmp-1574805381.79-120274326387676=/root/.ansible/tmp/ansible-tmp-1574805381.79-120274326387676\n', '')
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/commands/command.py
+<54.180.86.51> PUT /root/.ansible/tmp/ansible-local-20317dgOvYE/tmpoUTY1K TO /root/.ansible/tmp/ansible-tmp-1574805381.79-120274326387676/AnsiballZ_command.py
+<54.180.86.51> SSH: EXEC sftp -b - -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 '[54.180.86.51]'
+<13.209.3.186> (0, 'sftp> put /root/.ansible/tmp/ansible-local-20317dgOvYE/tmpy8Njra /root/.ansible/tmp/ansible-tmp-1574805381.78-222340959039814/AnsiballZ_command.py\n', '')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1574805381.78-222340959039814/ /root/.ansible/tmp/ansible-tmp-1574805381.78-222340959039814/AnsiballZ_command.py && sleep 0'"'"''
+<54.180.86.51> (0, 'sftp> put /root/.ansible/tmp/ansible-local-20317dgOvYE/tmpoUTY1K /root/.ansible/tmp/ansible-tmp-1574805381.79-120274326387676/AnsiballZ_command.py\n', '')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'chmod u+x /root/.ansible/tmp/ansible-tmp-1574805381.79-120274326387676/ /root/.ansible/tmp/ansible-tmp-1574805381.79-120274326387676/AnsiballZ_command.py && sleep 0'"'"''
+<13.209.3.186> (0, '', '')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 -tt 13.209.3.186 '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1574805381.78-222340959039814/AnsiballZ_command.py && sleep 0'"'"''
+<54.180.86.51> (0, '', '')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 -tt 54.180.86.51 '/bin/sh -c '"'"'/usr/bin/python /root/.ansible/tmp/ansible-tmp-1574805381.79-120274326387676/AnsiballZ_command.py && sleep 0'"'"''
+<13.209.3.186> (0, '\r\n{"changed": true, "end": "2019-11-26 21:56:31.688254", "stdout": "", "cmd": "cd /var/root/repos/test_bare.git && git clean -xdf", "rc": 0, "start": "2019-11-26 21:56:31.684583", "stderr": "", "delta": "0:00:00.003671", "invocation": {"module_args": {"creates": null, "executable": null, "_uses_shell": true, "strip_empty_ends": true, "_raw_params": "cd /var/root/repos/test_bare.git && git clean -xdf", "removes": null, "argv": null, "warn": true, "chdir": null, "stdin_add_newline": true, "stdin": null}}}\r\n', 'Connection to 13.209.3.186 closed.\r\n')
+<13.209.3.186> ESTABLISH SSH CONNECTION FOR USER: root
+<13.209.3.186> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 13.209.3.186 '/bin/sh -c '"'"'rm -f -r /root/.ansible/tmp/ansible-tmp-1574805381.78-222340959039814/ > /dev/null 2>&1 && sleep 0'"'"''
+<13.209.3.186> (0, '', '')
+changed: [13.209.3.186] => {
+    "changed": true, 
+    "cmd": "cd /var/root/repos/test_bare.git && git clean -xdf", 
+    "delta": "0:00:00.003671", 
+    "end": "2019-11-26 21:56:31.688254", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "cd /var/root/repos/test_bare.git && git clean -xdf", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "stdin_add_newline": true, 
+            "strip_empty_ends": true, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2019-11-26 21:56:31.684583", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+<54.180.86.51> (0, '\r\n{"changed": true, "end": "2019-11-26 21:56:33.510434", "stdout": "", "cmd": "cd /var/root/repos/test_bare.git && git clean -xdf", "rc": 0, "start": "2019-11-26 21:56:33.507166", "stderr": "", "delta": "0:00:00.003268", "invocation": {"module_args": {"creates": null, "executable": null, "_uses_shell": true, "strip_empty_ends": true, "_raw_params": "cd /var/root/repos/test_bare.git && git clean -xdf", "removes": null, "argv": null, "warn": true, "chdir": null, "stdin_add_newline": true, "stdin": null}}}\r\n', 'Connection to 54.180.86.51 closed.\r\n')
+<54.180.86.51> ESTABLISH SSH CONNECTION FOR USER: root
+<54.180.86.51> SSH: EXEC ssh -o ForwardAgent=yes -o StrictHostKeyChecking=no -o 'IdentityFile="/root/.ssh/id_rsa"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="root"' -o ConnectTimeout=10 54.180.86.51 '/bin/sh -c '"'"'rm -f -r /root/.ansible/tmp/ansible-tmp-1574805381.79-120274326387676/ > /dev/null 2>&1 && sleep 0'"'"''
+<54.180.86.51> (0, '', '')
+changed: [54.180.86.51] => {
+    "changed": true, 
+    "cmd": "cd /var/root/repos/test_bare.git && git clean -xdf", 
+    "delta": "0:00:00.003268", 
+    "end": "2019-11-26 21:56:33.510434", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "cd /var/root/repos/test_bare.git && git clean -xdf", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "stdin_add_newline": true, 
+            "strip_empty_ends": true, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2019-11-26 21:56:33.507166", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+META: ran handlers
+META: ran handlers
+
+PLAY RECAP *************************************************************************
+13.209.3.186               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+54.180.86.51               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Update finished at 2019-11-26 21:56:35
