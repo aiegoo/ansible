@@ -128,6 +128,5 @@ Refer to the Architecture diagram, when you push something from, say 'A' to 'M',
 This file runs the script 'server-update-ansible'.
 In 'server-update-ansible', there's code which runs an ansible playbook.
 This ansible playbook has some configurations as done in 2.2.3.
-he playbook connects with each of the deployment servers, say 'X', and pulls the code from the bare git repo.
+The playbook connects with each of the deployment servers, say 'X', and pulls the code from the bare git repo.
 
-``
