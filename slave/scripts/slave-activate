@@ -1,0 +1,6 @@
+#!/bin/bash
+
+repository="https://github.com/aiegoo"
+
+rm -rf "$HOME/repos/$1/"
+git clone "$repository/$1.git" "$HOME/repos/$1"

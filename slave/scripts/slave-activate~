@@ -1,0 +1,9 @@
+bin/bash
+
+repository="https://github.com/tonyrhee"
+
+rm -rf "$HOME/repos/$1/"
+git clone "$repository/$1.git" "$HOME/repos/$1"
+
+"cd $HOME
+"./install.sh
